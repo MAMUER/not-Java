@@ -1,0 +1,58 @@
+//1.1
+X=1/2 + 0.81*sin(0.5), Y=cos(%pi/2 ) + 5*sin(%pi/3) +2*cos(5/4), Z=(X+Y)/2
+format('v',3);X
+format('e',8);X
+//1.2
+V1=[1;2;3;4];
+V2=[1 2 3 4];
+V3=linspace(1,20,8)
+//1.3
+A=[1 2 3 4;4 5 6 7;1 2 3 4;4 5 6 7] ,B=[1 1 1 1;4 5 6 7;2 2 2 2;4 4 4 4]
+su=A+B
+ska=A*3
+mat=A*B
+ele=A.*B
+vek=V2*A
+a=B*V1
+lev=A/B
+pra=A\B
+ste=B^2
+b=B.^2
+//1.4
+tra=A'
+de=det(A)
+in=inv(A)
+dia=diag(A)
+vse=sum(A)
+c=prod(A)
+sto=sum(A,'r')
+str=sum(A,'c')
+d=prod(A,'r')
+e=prod(A,'c')
+ma=max(A)
+mi=min(A)
+f=max(A,'r')
+g=max(A,'c')
+h=min(A,'r')
+i=min(A,'c')
+trac=trace(A)
+siz=size(A)
+//1.5
+len=length(V3)
+//1.6
+j=A(2,:)
+k=A(:,1)
+//1.7
+l=[A B]
+m=[A;B]
+//2.1
+R=[-3 -2 -1 0;1 2 3 4;5 6 7 1]
+//2.2
+C=[1 2 3 4 5 6;2 3 4 5 6 7;3 4 5 6 7 8;4 5 6 7 8 9;5 6 7 8 9 10;1 2 3 4 5 6]
+//2.3
+C1=C(:,1:3)
+C3=C
+C(:,3)=[]
+C2=C
+C=C3
+C3 = C(:,[2 1 3 4 5 6]) 

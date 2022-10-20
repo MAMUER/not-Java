@@ -1,0 +1,26 @@
+//а
+dt=0.01;
+t=10;
+n=t/dt;
+u=1;
+k=10; T=10;
+y=0;
+yi=zeros(1,n);
+ti=zeros(1,n);
+for i=1:n
+y=y+(dt/T)*(-y+k*u)
+yi(i)=y;
+ti(i)=i*dt;
+end
+plot(ti,yi)
+xgrid
+
+//б
+t=0:0.01:50;
+p=poly(0,"p")
+k=10; T=10;
+W=k/(T*p+1)
+h=syslin('c',W);
+y=csim("step",t,h);
+plot(t,y);
+xgrid
