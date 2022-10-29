@@ -250,9 +250,8 @@ net = SecondNetwork()
 a = np.array([2, 3])
 print(net.feedforward(a))
 
-#1.2
+# 1.2
 import matplotlib.pyplot as plt
-import numpy as np
 import pandas as pd
 from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import train_test_split
@@ -265,13 +264,10 @@ url2 = r'https://raw.githubusercontent.com/AnnaShestova/salary-years-simple-line
 dataset1 = pd.read_csv(url1)
 dataset2 = pd.read_csv(url2)
 
-arr1 = np.asarray(dataset1)
-arr2 = np.asarray(dataset2)
-
-X_digits, Y_digits = arr1.data, arr1.target
+X_digits, Y_digits = dataset1.iloc[:, :-1].data, dataset1.target
 print('Dataset Sizes: ', X_digits.shape, Y_digits.shape)
 
-X_boston, Y_boston = arr2.data, arr2.target
+X_boston, Y_boston = dataset2.data, dataset2.target
 print('Dataset Sizes: ', X_boston.shape, Y_boston.shape)
 
 X_train, X_test, Y_train, Y_test = train_test_split(X_digits, Y_digits, train_size=0.8, test_size=0.2,
