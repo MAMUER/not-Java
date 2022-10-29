@@ -80,7 +80,7 @@ plt.scatter(marks, data)
 import matplotlib.pyplot as plt
 import numpy as np
 
-x = np.arange(0, 10, 1)
+x = np.arange(1, 10, 1)
 y = np.sqrt(1 + np.exp(np.sqrt(x)) + np.cos(x * x)) / abs(1 - (np.sin(x)) * (np.sin(x)) * (np.sin(x))) + np.log(
     abs(2 * x))
 plt.plot(x, y)
