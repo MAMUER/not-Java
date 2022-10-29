@@ -134,7 +134,7 @@ b = int(input("Enter the 2nd number "))
 
 c = int(input(
     "Enter 1 for multiplication, 2 for division, 3 for addition, 4 for subtraction, 5 for exponent, 6 for sine, "
-    "7 for cosine, 8 for exponentiation:\n")) 
+    "7 for cosine, 8 for exponentiation:\n"))
 
 if c == 1:
     print(a * b)
@@ -154,4 +154,3 @@ elif c == 8:
     print(a ^ b)
 else:
     print('Error')
-    
