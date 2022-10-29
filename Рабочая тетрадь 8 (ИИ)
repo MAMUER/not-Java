@@ -51,7 +51,6 @@ for axi, center in zip(ax.flat, centers):
 plt.show()
 
 #1.1.2
-import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 import scipy.cluster.hierarchy as shc
