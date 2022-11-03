@@ -1,5 +1,6 @@
 # 1.1.2(1,2.1)
 import numpy as np
+from sklearn.datasets import load_digits, load_boston
 
 
 def sigmoid(x):
@@ -168,16 +169,14 @@ url2 = r'https://raw.githubusercontent.com/AnnaShestova/salary-years-simple-line
 dataset1 = pd.read_csv(url1)
 dataset2 = pd.read_csv(url2)
 
-X_digits, Y_digits = dataset1.iloc[:, :-1].data, dataset1.target
-print('Dataset Sizes: ', X_digits.shape, Y_digits.shape)
+X_digits, Y_digits = dataset1.iloc[:, :-1], dataset1.iloc[:, 4]
 
-X_boston, Y_boston = dataset2.data, dataset2.target
-print('Dataset Sizes: ', X_boston.shape, Y_boston.shape)
+X_boston, Y_boston = dataset2.iloc[:, :], dataset2.iloc[:, 1]
 
 X_train, X_test, Y_train, Y_test = train_test_split(X_digits, Y_digits, train_size=0.8, test_size=0.2,
                                                     stratify=Y_digits, random_state=123)
-print('Train/Test Sizes: ', X_train.shape, X_test.shape, Y_train.shape, Y_test.shape)
-
+print('Train/Test Sizes: ', X_train.shape, Y_train.shape, X_test.shape, Y_test.shape)
+print('\n', X_train, '\n', Y_train)
 mlp_classifier = MLPClassifier(random_state=123)
 mlp_classifier.fit(X_train, Y_train)
 
@@ -196,8 +195,8 @@ def plot_confusion_matrix(Y_test, Y_preds):
     plt.yticks(range(10), range(10))
     plt.xticks(range(10), range(10))
     plt.colorbar()
-    for i in range(10):
-        for j in range(10):
+    for i in range(3):
+        for j in range(3):
             plt.text(i - 0.2, j + 0.1, str(conf_mat[j, i]), color='tab:red')
 
 
