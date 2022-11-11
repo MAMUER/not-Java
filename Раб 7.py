@@ -169,8 +169,10 @@ url2 = r'https://raw.githubusercontent.com/AnnaShestova/salary-years-simple-line
 dataset1 = pd.read_csv(url1)
 dataset2 = pd.read_csv(url2)
 
-X_digits, Y_digits = dataset1.iloc[:, :-1], dataset1.iloc[:, 4]
+digits = load_digits()
+X_digits, Y_digits = digits.data, digits.target
 
+# X_digits, Y_digits = dataset1.iloc[:, :-1], dataset1.iloc[:, 4]
 X_boston, Y_boston = dataset2.iloc[:, :], dataset2.iloc[:, 1]
 
 X_train, X_test, Y_train, Y_test = train_test_split(X_digits, Y_digits, train_size=0.8, test_size=0.2,
