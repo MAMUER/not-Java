@@ -225,3 +225,5 @@ print("Number of Coefs: ", len(mlp_regressor.coefs_))
 print("Number of Intercepts: ", mlp_regressor.intercepts_)
 print("Number of Iterations for Which Estamator Ran: ", mlp_regressor.n_iter_)
 print("Name of Output Layer Activation Function: ", mlp_regressor.out_activation_)
+
+plt.show()
