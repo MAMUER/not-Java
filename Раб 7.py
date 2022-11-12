@@ -81,8 +81,8 @@ print(network.feedforward(x))
 import numpy as np
 
 
-def ReLU(x):
-    return np.max(0, x)
+def tanh(x):
+    return np.tanh(x)
 
 
 class Neuron:
@@ -92,7 +92,7 @@ class Neuron:
 
     def feedforward(self, inputs):
         total = np.dot(self.weights, inputs) + self.bias
-        return ReLU(total)
+        return tanh(total)
 
 
 class OurNeuralNetwork:
