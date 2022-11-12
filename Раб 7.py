@@ -92,7 +92,7 @@ class Neuron:
 
     def feedforward(self, inputs):
         total = np.dot(self.weights, inputs) + self.bias
-        return sigmoid(total)
+        return tanh(total)
 
 
 class OurNeuralNetwork:
@@ -120,8 +120,8 @@ print(network.feedforward(x))
 import numpy as np
 
 
-def sigmoid(x):
-    return 1 / (1 + np.exp(-x))
+def ReLU(x):
+    return max(0,x)
 
 
 class Neuron:
